@@ -1,0 +1,676 @@
+// ИМПОРТ ДРУГИХ СТИЛЕЙ
+@import "nullstyle.scss";
+//-----------------------
+
+// ШРИФТ
+
+@font-face {
+    font-family: 'Tactic Sans';
+    src: url('../fonts/TacticSans-Reg.eot');
+    src: local('Tactic Sans'), local('TacticSans-Reg'),
+        url('../fonts/TacticSans-Reg.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TacticSans-Reg.woff2') format('woff2'),
+        url('../fonts/TacticSans-Reg.woff') format('woff'),
+        url('../fonts/TacticSans-Reg.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Tactic Sans';
+    src: url('../fonts/TacticSans-Bld.eot');
+    src: local('Tactic Sans Bold'), local('TacticSans-Bld'),
+        url('../fonts/TacticSans-Bld.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TacticSans-Bld.woff2') format('woff2'),
+        url('../fonts/TacticSans-Bld.woff') format('woff'),
+        url('../fonts/TacticSans-Bld.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Tactic Sans';
+    src: url('../fonts/TacticSans-RegIt.eot');
+    src: local('Tactic Sans Italic'), local('TacticSans-RegIt'),
+        url('../fonts/TacticSans-RegIt.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TacticSans-RegIt.woff2') format('woff2'),
+        url('../fonts/TacticSans-RegIt.woff') format('woff'),
+        url('../fonts/TacticSans-RegIt.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Tactic Sans';
+    src: url('../fonts/TacticSans-BldIt.eot');
+    src: local('Tactic Sans Bold Italic'), local('TacticSans-BldIt'),
+        url('../fonts/TacticSans-BldIt.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TacticSans-BldIt.woff2') format('woff2'),
+        url('../fonts/TacticSans-BldIt.woff') format('woff'),
+        url('../fonts/TacticSans-BldIt.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Tactic Sans';
+    src: url('../fonts/TacticSans-MedIt.eot');
+    src: local('Tactic Sans Medium Italic'), local('TacticSans-MedIt'),
+        url('../fonts/TacticSans-MedIt.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TacticSans-MedIt.woff2') format('woff2'),
+        url('../fonts/TacticSans-MedIt.woff') format('woff'),
+        url('../fonts/TacticSans-MedIt.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Tactic Sans';
+    src: url('../fonts/TacticSans-LgtIt.eot');
+    src: local('Tactic Sans Light Italic'), local('TacticSans-LgtIt'),
+        url('../fonts/TacticSans-LgtIt.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TacticSans-LgtIt.woff2') format('woff2'),
+        url('../fonts/TacticSans-LgtIt.woff') format('woff'),
+        url('../fonts/TacticSans-LgtIt.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+	font-family: 'Tactic Sans';
+	src: url('../fonts/TacticSans-Lgt.eot');
+	src: local('Tactic Sans Light'), local('TacticSans-Lgt'),
+		 url('../fonts/TacticSans-Lgt.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/TacticSans-Lgt.woff2') format('woff2'),
+		 url('../fonts/TacticSans-Lgt.woff') format('woff'),
+		 url('../fonts/TacticSans-Lgt.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+//&display=swap
+
+//----------------------
+
+// ПЕРЕМЕННЫЕ
+	// Шрифт по умолчанию
+	$fontFamily: 'Tactic Sans';
+	$fontSize: rem(16);
+	$mainColor: #000;
+	$red: #D8020E;
+	$ph-red:  #FF8087;
+
+	// Контейнер
+	$containerMaxWidth: 1170px;
+	$containerPadding: 15px;
+
+	// Весь экран
+	$minWidth: 320px;
+//----------------------
+//ГОТОВЫЙ НАСТРОЕННЫЙ КОД
+.wrapper {
+	width: 100%;
+	min-width: $minWidth;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+body {
+	font-family: $fontFamily;
+	font-size: $fontSize;
+	color: $mainColor;
+}
+._container {
+	max-width: $containerMaxWidth;
+	margin: 0 auto;
+	padding: 0 $containerPadding;
+	min-height: 100%;
+}
+//-------------------------------------
+// HEADER
+
+.header {
+	background: linear-gradient(104deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 63%, rgba(0,0,0,1) 63%, rgba(0,0,0,1) 100%);
+	@media (max-width: 920px) {
+		background: linear-gradient(104deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 59%, rgba(0,0,0,1) 59%, rgba(0,0,0,1) 100%);
+	}
+	@media (max-width: 768px) {
+		background: linear-gradient(104deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 70%, rgba(0,0,0,1) 70%, rgba(0,0,0,1) 100%);
+	}
+	min-height: 60px;
+	position: relative;
+	z-index: 100;
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 60px;
+
+	}
+
+	&__left {
+		display: flex;
+		align-items: center;
+		color: $mainColor;
+	}
+
+	&__logo-freshauto {
+		display: flex;
+		align-items: center;
+		img {
+			margin: 0px 10px 0px 0px;
+		}
+		@media (max-width: 768px) {
+			flex-direction: column;
+			img {
+				max-width: 115px;
+				margin: 0px 0px 5px 0px;
+			}
+		}
+	}
+
+	&__text {
+		min-height: 40px;
+		border-left: 1px black solid;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 12px;
+		line-height: 14px;
+		padding: 3px 0px 0px 10px;
+		@media (max-width: 768px) {
+			min-height: 14px;
+			height: 14px;
+			padding: 0;
+			border-left: none;
+			font-size: 9px;
+			line-height: 11px;
+		}
+	}
+
+	&__logo-chery {
+		margin: 0px 0px 0px 10px;
+		@media (max-width: 768px) {
+			margin: 0px 0px 0px 30px;
+			img {
+				max-width: 50px;
+			}
+		}
+	}
+
+	&__right {
+		display: flex;
+		align-items: center;
+		color: white;
+	}
+
+	&__number {
+		font-size: 12px;
+		line-height: 14px;
+		font-weight: 300;
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
+
+	&__bookcallback {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 149px;
+		height: 30px;
+		background: #D8020E;
+		border-radius: 4px;
+		font-size: 12px;
+		line-height: 14px;
+		color: white;
+		font-weight: 300;
+		margin: 0px 0px 0px 20px;
+		letter-spacing: 0.5px;
+		@media (max-width: 768px) {
+			display: none;
+		}
+		&:hover {
+			transform: scale(1.03);
+		}
+		&:active {
+			transform: scale(1);
+		}
+	}
+
+	&__bookcallback-mobile {
+		display: none;
+		align-items: center;
+		justify-content: center;
+		width: 30px;
+		height: 30px;
+		background: #D8020E;
+		border-radius: 4px;
+		margin: 0px 0px 0px 20px;
+		@media (max-width: 768px) {
+			display: flex;
+		}
+	}
+}
+
+// ПЕРВЫЙ БЛОК
+
+.titleblock {
+	position: relative;
+	top: -60px;
+	min-height: 720px;
+	background: url('../img/hrader-bg.png') center / cover no-repeat;
+	@media (max-width: 1440px) {
+		background: url('../img/hrader-bg.png') -440px 0px / cover no-repeat;
+	}
+	@media (max-width: 980px) {
+		background: url('../img/hrader-bg.png') -700px 0px / cover no-repeat;
+	}
+	@media (max-width: 425px) {
+		background: url('../img/hrader-bg-mobile.png') center / cover no-repeat;
+		min-height: 510px;
+		height: 500px;
+	}
+	&__container {
+		display: flex;
+		align-items: center;
+		height: 720px;
+		@media (max-width: 425px) {
+			align-items: flex-start;
+			padding: 120px 0px 0px 0px;
+			height: 500px;
+		}
+	}
+
+	&__title {
+		max-width: 430px;
+		font-size: 60px;
+		line-height: 75px;
+		text-transform: uppercase;
+		color: white;
+		font-weight: bold;
+		@media (max-width: 1440px) {
+			font-size: 48px;
+			line-height: 58px;
+		}
+		@media (max-width: 768px) {
+			font-size: 38px;
+			line-height: 44px;
+		}
+		@media (max-width: 425px) {
+			font-size: 28px;
+			line-height: 34px;
+		}
+	}
+}
+
+// ТАЙМЕР
+
+.timer {
+margin: 0px 0px 60px 0px;
+@media (max-width: 768px) {
+	margin: 0px 0px 30px 0px;
+}
+	&__container {
+		display: flex;
+		gap: 15px;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	&__img {
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
+
+	&__text {
+	}
+
+	&__title {
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 36px;
+		text-transform: uppercase;
+		margin: 0px 0px 10px 0px;
+	}
+
+	&__end {
+		font-size: 18px;
+		line-height: 22px;
+		margin: 0px 0px 40px 0px;
+	}
+
+	.main-taimer ul {
+		display: flex;
+		gap: 15px;
+		margin: 0px 0px 40px 0px;
+		li {
+			font-size: 48px;
+			line-height: 58px;
+		}
+	}
+
+
+	&__form {
+		display: flex;
+		gap: 30px;
+		input {
+			background: #FFFFFF;
+			border: 1px solid #D8020E;
+			border-radius: 4px;
+			padding: 13px 10px;
+			width: 100%;
+			&::placeholder {
+				color: $ph-red;
+			}
+		}
+		button {
+			background: #D8020E;
+			border-radius: 4px;
+			min-width: 192px;
+			min-height: 45px;
+			font-size: 16px;
+			line-height: 19px;
+			color:white;
+			&:hover {
+				transform: scale(1.03);
+			}
+			&:active {
+				transform: scale(1);
+			}
+		}
+	}
+	@media (max-width: 768px) {
+		.main-taimer ul {
+			justify-content: center;
+			margin: 0px 0px 30px 0px;
+		}
+		&__title {
+			text-align: center;
+		}
+	
+		&__end {
+			text-align: center;
+			margin: 0px 0px 30px 0px;
+		}
+		.main-taimer ul {
+			gap: 10px;
+			li {
+				font-size: 32px;
+				line-height: 38px;
+			}
+		}
+		&__form {
+			flex-direction: column;
+			gap: 20px;
+			align-items: center;
+			button {
+				width: 100%;
+				min-width: 0px;
+			}
+			input {
+				width: 100%;
+				min-width: 0px;
+			}
+		}
+	}
+}
+
+// МЕНЮ
+
+.nav {
+	margin: 0px 0px 20px 0px;
+
+	&__menu {
+		display: flex;
+		height: 50px;
+	}
+
+	&__item {
+		border-right: $red solid 1px;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		padding: 0px 20px;
+		&:last-child {
+			border-right: none;
+			padding: 0px 0px 0px 20px;
+		}
+		&:first-child {
+			padding: 0px 20px 0px 0px;
+		}
+		text-align: center;
+	}
+
+	&__link {
+		font-size: 18px;
+		line-height: 22px;
+		color: #D8020E;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	@media (max-width: 1110px) {
+		margin: 0px 0px 20px 0px;
+		&__menu {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 15px;
+			height: auto;
+		}
+	
+		&__item {
+			border-bottom: $red solid 1px;
+			border-right: 0px;
+			height: 50px;
+			display: flex;
+			align-items: center;
+			padding: 0px 0px;
+			width: 100%;
+			&:last-child {
+				padding: 0px 0px 0px 0px;
+			}
+			&:first-child {
+				padding: 0px 0px 0px 0px;
+			}
+			text-align: center;
+		}
+	}
+}
+
+
+// МОДЕЛИ МАШИН
+
+.models {
+	margin: 20px 0px 40px 0px;
+	a {
+		color: #000;
+	}
+
+	&__big-title {
+		color: #000;
+		margin: 0px 0px 50px 0px;
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 36px;
+		text-transform: uppercase;
+	}
+
+	&__container {
+		display: flex;
+		gap: 10px;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		align-items: flex-start;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		max-width: 178px;
+		@media (max-width: 400px) {
+			max-width: 138px;
+		}
+	}
+	
+	
+	&__img {
+		width: 100%;
+		img {
+			width: 100%;
+		}
+		@media (max-width: 400px) {
+			img {
+				height: 80px;
+				object-fit: cover;
+			}
+		}
+		&:hover {
+			img {
+				border: 1px $red solid;
+			}
+		}
+	}
+
+	&__title {
+		font-size: 16px;
+		line-height: 19px;
+		text-transform: uppercase;
+		span {
+			font-weight: bold;
+		}
+	}
+
+	&__benefit {
+		font-style: italic;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 19px;
+
+		color: #D8020E;
+	}
+}
+
+// В НАЛИЧИИ
+
+.availability {
+
+	&__title {
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 36px;
+		text-transform: uppercase;
+		color: #000000;
+		margin: 0px 0px 40px 0px;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		justify-content: center;
+		align-items: center;
+	}
+}
+.card {
+	&:nth-child(even) {
+		flex-direction: row-reverse;
+	}
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 15px;
+	justify-content: space-between;
+	&__img {
+		max-width: 465px;
+		@media (max-width: 590px) {
+			width: 100%;
+		}
+	}
+
+	&__inform {
+		max-width: 561px;
+	}
+
+	&__title {
+		font-size: 24px;
+		line-height: 29px;
+		text-transform: uppercase;
+		color: #000000;
+		span {
+			font-weight: bold;
+		}
+		margin: 0px 0px 10px 0px;
+		@media (max-width: 590px) {
+			font-size: 24px;
+			line-height: 29px;
+		}
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 140%;
+		color: #5F5F5F;
+	}
+
+	&__price {
+		display: flex;
+		font-size: 18px;
+		line-height: 140%;
+		color: #000000;
+		gap: 60px;
+		span {
+			display: block;
+			font-weight: bold;
+		}
+		margin: 20px 0px 20px 0px;
+		@media (max-width: 590px) {
+			flex-direction: column;
+			gap: 10px;
+			font-size: 14px;
+		}
+	}
+
+	&__service {
+		font-size: 18px;
+		line-height: 140%;
+		margin: 0px 0px 20px 0px;
+		@media (max-width: 590px) {
+			font-size: 14px;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 15px;
+	}
+
+	&__red-btn {
+		background: #D8020E;
+		color: #FFFFFF;
+	}
+
+	&__white-btn {
+		background: #ffffff;
+		color: $red;
+	}
+
+	&__white-btn,
+	&__red-btn {
+		flex: 1 1 100%;
+		@media (max-width: 590px) {}
+		border: 1px solid #D8020E;
+		box-sizing: border-box;
+		border-radius: 4px;
+		font-size: 16px;
+		line-height: 19px;
+		height: 45px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&:hover {
+			transform: scale(1.01);
+		}
+		&:active {
+			transform: scale(1);
+		}
+	}
+}
