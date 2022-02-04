@@ -579,7 +579,7 @@ margin: 0px 0px 60px 0px;
 	gap: 15px;
 	justify-content: space-between;
 	&__img {
-		max-width: 465px;
+		width: 465px;
 		@media (max-width: 590px) {
 			width: 100%;
 		}
