@@ -262,6 +262,9 @@ body {
 	@media (max-width: 425px) {
 		background: url('../img/hrader-bg-mobile.png') center / cover no-repeat;
 		min-height: 510px;
+		height: 600px;
+	}
+	@media (max-width: 366px) {
 		height: 500px;
 	}
 	&__container {
@@ -271,8 +274,11 @@ body {
 		@media (max-width: 425px) {
 			align-items: flex-start;
 			padding: 120px 0px 0px 0px;
-			height: 500px;
+			height: 600px;
 		}
+		@media (max-width: 366px) {
+			height: 500px;
+		}	
 	}
 
 	&__title {
@@ -551,7 +557,7 @@ margin: 0px 0px 60px 0px;
 // В НАЛИЧИИ
 
 .availability {
-
+padding: 0 0 40px 0;
 	&__title {
 		font-weight: bold;
 		font-size: 30px;
@@ -578,6 +584,7 @@ margin: 0px 0px 60px 0px;
 	align-items: center;
 	gap: 15px;
 	justify-content: space-between;
+	width: 100%;
 	&__img {
 		width: 465px;
 		@media (max-width: 590px) {
@@ -674,3 +681,180 @@ margin: 0px 0px 60px 0px;
 		}
 	}
 }
+
+
+.bottomtitle {
+	background: url('../img/bottom-img.png') center / cover no-repeat;
+	height: 484px;
+	@media (max-width: 768px) {
+		background: url('../img/bottom-img-modile.png	') center / cover no-repeat;
+		height: auto;
+		padding: 10px 0px;
+	}
+	&__container {
+		height: 484px;
+		display: flex;		
+		flex-direction: column;
+		align-items: flex-end;
+		justify-content: center;
+		gap: 20px;
+		text-align: right;
+		@media (max-width: 768px) {
+			text-align: center;
+			align-items: center;
+			height: auto;
+		}
+	}
+
+	&__title {
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 36px;
+		color: white;
+		max-width: 465px;
+		@media (max-width: 768px) {
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 22px;
+		color: #FFFFFF;
+		max-width: 465px;
+		@media (max-width: 768px) {
+			font-size: 14px;
+			line-height: 17px;
+		}
+	}
+
+	&__btn {
+		background: #D8020E;
+		border: 1px solid #D8020E;
+		box-sizing: border-box;
+		border-radius: 4px;
+		font-size: 16px;
+		line-height: 19px;
+		text-align: center;
+		color: #FFFFFF;
+		width: 273px;
+		padding: 13px 0px;
+		&:hover {
+			transform: scale(1.03);
+		}
+		@media (max-width: 768px) {
+			width: 100%	;
+		}
+	}
+}
+
+
+.inform {
+	padding: 40px 0px;
+	&__title {
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 36px;
+		margin: 0px 0px 20px 0px;
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 140%;
+	}
+	@media (max-width: 425px) {
+		padding: 20px 0px;
+	}
+}
+
+.map {
+	position: relative;
+	height: 470px;
+	iframe {
+		width: 100%;
+		height: 470px;
+	}
+
+	.map__widget {
+		position: absolute;
+		width: 100%;
+		top: 20px;
+		left: 0px;
+		pointer-events: none;
+	}
+	&__table {
+		width: auto;
+		max-width: 380px;
+		height: auto;
+		padding: 20px;
+		background: #D8020E;
+	}
+
+	&__title {
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 29px;
+		text-transform: uppercase;
+		color: #FFFFFF;
+		margin: 0px 0px 15px 0px;
+	}
+	&__item {
+		font-size: 18px;
+		line-height: 140%;
+		color: #FFFFFF;
+	}
+	@media (max-width: 425px) {
+		&__table {
+			padding: 15px;
+		}
+		&__title {
+			font-size: 18px;
+			line-height: 22px;
+		}
+		&__item {
+			font-size: 14px;
+		}
+	}
+}
+
+.footer {
+	min-height: 85px;
+	height: auto;
+	background: #282828;
+	padding: 30px 0px;
+	&__grid {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		color: white;
+		gap: 40px;
+		@media (max-width: 768px) {
+			flex-direction: column;
+		}
+	}
+
+	&__conditions {
+		color: white;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__madeby {
+		text-align: center;
+		display: flex;
+		gap: 10px;
+		align-items: center;
+		svg {
+			width: 275px;
+			position: relative;
+			top: -10px;
+		}
+		@media (max-width: 768px) {
+			flex-direction: column;
+		}
+	}
+}
+
